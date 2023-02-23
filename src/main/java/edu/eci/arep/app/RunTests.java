@@ -1,6 +1,6 @@
 package edu.eci.arep.app;
 
-import edu.eci.arep.anotation.Test;
+import edu.eci.arep.annotation.Test;
 
 import java.lang.reflect.Method;
 

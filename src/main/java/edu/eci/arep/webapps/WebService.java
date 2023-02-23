@@ -1,7 +1,7 @@
 package edu.eci.arep.webapps;
 
-import edu.eci.arep.anotation.Component;
-import edu.eci.arep.anotation.RequestMapping;
+import edu.eci.arep.annotation.Component;
+import edu.eci.arep.annotation.RequestMapping;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
