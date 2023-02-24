@@ -22,12 +22,38 @@ Para hacer uso de esta aplicación debe tener conocimientos de:
 Para ejecutar la aplicación, debera en la línea de comandos (cmd) ubicarse en la carpeta donde se clonó el proyecto y ejecutar el siguiente comando:
 
 ```
-mvn clean package exec:java -D "exec.mainClass"=""
+mvn clean package exec:java -D "exec.mainClass"="edu.eci.arep.app.App"
 ```
+
+También se puede ejecutar con el siguiente comando sin necesidad de utilizar maven:
+
+```
+java -cp target/classes edu.eci.arep.app.App
+```
+
+Cuando se muestre el mensaje "Listo para recibir ...", ingrese al siguiente enlace http://localhost:35000/apps/html. 
 
 ## Test
 
+Como pruebas, para este taller se probó el funcionamiento del proyecto ingresando a los siguientes enlaces:
 
+http://localhost:35000/apps/html
+
+![](img/html.png)
+
+http://localhost:35000/apps/png
+
+Con la imagen no se porqué no la muestra.
+
+http://localhost:35000/apps/js
+
+![](img/js.png)
+
+http://localhost:35000/apps/css
+
+![](img/css.png)
+
+Donde en cada uno de ellos como se puede ver, el servidor fue capaz de entregar páginas html y archivos png, js y css.
 
 ## Construido con
 
@@ -43,3 +69,12 @@ Juan Pablo Sánchez Bermúdez
 
 ## Descripción del proyecto
 
+Para el desarrollo de este proyecto se hizo la creación de dos anotaciones importantes, ```@Component``` y ```@RequestMapping``` que simulan el funcionamiento de Spring.
+
+### @Component
+
+Esta anotación indica que clases deben tenerse en cuenta para hacer uso de la anotación ```@RequestMapping```. En este proyecto solo ```WebSercice``` tiene esta anotación.
+
+### @RequestMapping
+
+Esta anotación indica que métodos pueden invocar el servicio que se ingrese en la URL si estos tienen esta anotación.
